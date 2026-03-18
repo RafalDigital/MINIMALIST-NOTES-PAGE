@@ -6,6 +6,12 @@
     <title>MINIMALIST NOTES</title>
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/hero.css">
+
+    <!-- FONT -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
 </head>
 <body>
     <nav>
@@ -18,5 +24,34 @@
             <a href=""><span>Start Writing</span></a>
         </div>
     </nav>
+
+    <section class="hero-section">
+        <div class="hero-container">
+            <div class="left-hero">
+                <h1>Clear your mind, simple your notes.</h1>
+                <p>Jot down what's on your mind in seconds with a super lightweight interface.</p>
+                <div class="buttons">
+                    <div class="btn-1"><a href=""><span>Start Writing</span></a></div>
+                    <div class="btn-2"><a href="">More Info</a></div>
+                </div>
+            </div>
+            <div class="right-hero"></div>
+        </div>
+        
+    </section>
+<script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script> 
+
+<script>
+  const lenis = new Lenis({
+    duration: 1.2,
+    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+    smoothWheel: true
+  });
+  function raf(time) {
+    lenis.raf(time);
+    requestAnimationFrame(raf);
+  }
+  requestAnimationFrame(raf);
+</script>
 </body>
 </html>

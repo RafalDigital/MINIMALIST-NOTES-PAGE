@@ -6,4 +6,26 @@ html, body {
     overflow-x: hidden;
     width: 100%;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow-y: visible;
 }
+
+/* CUSTOM SCROLL */
+::-webkit-scrollbar {
+    width: 1.25rem;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: .5rem;
+  border: 3px solid rgba(0, 0, 0, 0);
+  border-right: 5px solid rgba(0, 0, 0, 0);
+  background-clip: content-box;
+}
+
+/* DEFAULT FONT */
+h1 { font-family: 'Playfair Display', serif; }
+p { font-family: 'Segoe UI', sans-serif; }
