@@ -148,6 +148,7 @@
         top: -3rem;
         left: 12rem;
         z-index: 2;
+        scale: 1.2;
     }
 }
 
@@ -156,6 +157,7 @@
         top: -3rem;
         left: 12rem;
         z-index: 2;
+        scale: 1.2;
     }
     35% {
         top: -5rem;
@@ -165,5 +167,6 @@
         top: 1rem;
         left: 18rem;
         z-index: 1;
+        scale: 1;
     }
 }
