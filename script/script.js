@@ -31,7 +31,7 @@ window.addEventListener('scroll', () => {
 
     const currentPosition = window.scrollY ;
 
-    while (currentPosition > 0 && currentPosition < 200) {
+    if (currentPosition > 0 && currentPosition < 200) {
         window.scrollTo ({
             top: 200,
             behavior: 'smooth'
