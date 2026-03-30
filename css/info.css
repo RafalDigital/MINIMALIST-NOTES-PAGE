@@ -6,3 +6,35 @@
     height: 70rem;
     overflow-y: hidden;
 }
+
+@keyframes flectoMorph {
+    0% {
+        opacity: 0;
+        transform: scale(0.3, 0.3) translateY(50px); /* Kotak sangat kecil */
+        filter: blur(10px); /* Efek blur halus saat muncul */
+    }
+    40% {
+        opacity: 1;
+        transform: scale(1.1, 0.9) translateY(0); /* Sedikit memantul (squash & stretch) */
+        filter: blur(0);
+    }
+    70% {
+        /* Di sini "Width" terlihat berubah karena Scale X diperbesar */
+        transform: scale(1.8, 1); 
+    }
+    100% {
+        /* Hasil akhir: Terlihat seperti persegi panjang lebar */
+        transform: scale(2, 1) translateX(-2rem);
+        opacity: 1;
+    }
+}
+
+.first-box {
+    width: 5rem;
+    height: 5rem;
+    transform: scale(0);
+    margin-inline: auto;
+    animation: flectoMorph 1.8s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+    will-change: transform; /* Memberitahu browser untuk siap-siap pakai GPU */
+    background-color: var(--primary);
+}
