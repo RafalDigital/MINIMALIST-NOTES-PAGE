@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MINIMALIST NOTES</title>
+    <link rel="stylesheet" href="css/main/main-navbar.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="nav-links"><a class="link active" href="#">Notes</a></div>
+            <div class="nav-links"><a class="link" href="#">Task</a></div>
+        </div>
+    </nav>
+</body>
+<script>
+    const navContainer = document.querySelector('.nav-container');
+    const links = document.querySelectorAll('.link');
+
+    // Fungsi utama untuk tukar-menukar
+function toggleNav() {
+    // 1. Geser background pill (::before)
+    navContainer.classList.toggle('active');
+
+    // 2. Tukar class active pada teks link
+    links[0].classList.toggle('active');
+    links[1].classList.toggle('active');
+}
+
+// Cukup pasang SATU listener di container-nya
+navContainer.addEventListener('click', (e) => {
+    // Jalankan fungsi tukar
+    toggleNav();
+});
+</script>
+</html>
