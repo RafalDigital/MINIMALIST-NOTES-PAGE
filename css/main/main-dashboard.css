@@ -38,10 +38,15 @@
     border-radius: 100rem;
     background-color: var(--primary);
     position: absolute;
+    border: none;
     top: .5rem;
     left: 50%;
     transform: translateX(-50%);
     z-index: 2;
+}
+
+.section-1 .add i {
+    font-size: 5rem;
 }
 
 .section-1 .circle {

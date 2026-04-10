@@ -3,7 +3,7 @@
     max-width: 1200px;
     margin-inline: auto;
     padding-inline: 5rem;
-    height: 70rem;
+    height: 30rem;
     overflow-y: hidden;
 }
 
@@ -30,8 +30,11 @@
     transform: scale(0);
     opacity: 0;
     margin-inline: auto;
-    animation: flectoMorph 1.8s cubic-bezier(0.19, 1, 0.22, 1) forwards;
-    will-change: transform;
     background-color: var(--primary);
     border-radius: .25rem;
+}
+
+.info-section.show .first-box {
+    animation: flectoMorph 1.8s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+    will-change: transform;
 }

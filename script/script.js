@@ -10,6 +10,9 @@
   }
   requestAnimationFrame(raf);
 
+
+// NAVBAR
+
 // HERO SECTION
 const cards = document.querySelectorAll('.card');
 let isProcessing = false;
@@ -38,6 +41,7 @@ cards.forEach((c) => {
 })
 
 // INFO SECTION
+const infoSection = document.querySelector('.info-section');
 function handleFirstScroll(e) {
     let currentPosition = e.scroll;
     
@@ -55,3 +59,11 @@ function handleFirstScroll(e) {
 }
 
 lenis.on('scroll', handleFirstScroll);
+
+const observer = new IntersectionObserver((entries) => {
+    if(entries[0].isIntersecting){
+        entries[0].target.classList.add('show');
+        observer.unobserve(entries[0])
+    }
+},{})
+observer.observe(infoSection)
