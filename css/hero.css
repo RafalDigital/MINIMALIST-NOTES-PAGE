@@ -171,7 +171,7 @@
     }
 }
 
-@media (max-width: 1200px) {
+/* @media (max-width: 1200px) {
     .right-hero {
         display: none;
     }
@@ -194,9 +194,9 @@
     }
     .hero-container {
         width: 100%;
-        min-height: 100dvh; /* Tetap satu layar penuh */
+        min-height: 100dvh; 
         display: flex;
-        justify-content: center; /* KUNCINYA: Paksa konten ke ATAS, bukan ke tengah */
+        justify-content: center; 
         margin-top: 13rem;
     }
     .hero-section {
@@ -210,8 +210,65 @@
         padding-bottom: 4rem;
     }
 }
-@media (max-width: 920px) {
+ */
+
+ @media (max-width: 1200px) {
     .hero-section {
-        padding-inline: .2rem;
+        height: auto;
+        min-height: 100vh;
+        padding-inline: 1.5rem;
+        padding-top: .75rem;
+        padding-bottom: 3rem;
+    }
+
+    .hero-container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 0; /* ❗ ini penting banget */
+        gap: 2rem;
+    }
+
+    .left-hero {
+        align-items: center;
+        text-align: center;
+    }
+
+    .left-hero h1 {
+        font-size: 2rem;
+        line-height: 1.3;
+    }
+
+    .left-hero p {
+        font-size: 0.95rem;
+        max-width: 400px;
+    }
+
+    .buttons {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .right-hero {
+        display: none;
+    }
+}
+
+/* HP kecil */
+@media (max-width: 600px) {
+    .left-hero h1 {
+        font-size: 1.6rem;
+    }
+
+    .left-hero p {
+        font-size: 0.85rem;
+    }
+    .left-hero {
+        max-width: 300px;
+        width: 100%;
+    }
+    .hero-section {
+        padding-inline: .5rem;
     }
 }

@@ -238,7 +238,7 @@
     }
 
 
-    /* reset absolute jadi normal flow */
+
     .content-1, .content-2 {
         position: relative;
         top: unset;
@@ -250,7 +250,7 @@
         height: 0;
     }
 
-    /* animasi disederhanakan biar gak aneh */
+
     .info-section.show .content-1 {
         animation: contentMobile 1s ease-in-out 1.8s forwards;
     }
@@ -302,7 +302,6 @@
 }
 
 
-/* HP kecil */
 @media (max-width: 920px) {
     .info-section {
         padding-inline: 1rem;
@@ -315,7 +314,7 @@
     .info-section.show .content-1,
     .info-section.show .content-2 {
         height: 150px;
-        max-width: 400px;
+        max-width: 300px;
     }
     .info-section {
         padding-inline: .5rem;
