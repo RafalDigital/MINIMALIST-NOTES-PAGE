@@ -317,4 +317,7 @@
         height: 150px;
         max-width: 600px;
     }
+    .info-section {
+        padding-inline: .5rem;
+    }
 }
