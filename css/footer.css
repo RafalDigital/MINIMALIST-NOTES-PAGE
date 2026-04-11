@@ -7,12 +7,20 @@
 .cta h1 {
     font-size: 2.2rem;
     color: var(--primary);
+
+    /* Animating */
+    opacity: 0;
+    transform: translateY(10px);
 }
 
 .cta p {
     margin-top: 1rem;
     opacity: 0.7;
     font-size: 1rem;
+
+    /* Animating */
+    opacity: 0;
+    transform: translateY(10px);
 }
 
 .cta a:hover {
@@ -32,6 +40,10 @@
     overflow: hidden;
     z-index: 1;
     transition: 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+
+    /* Animating */
+    opacity: 0;
+    transform: translateY(10px);
 }
 .cta a::before {
     content: '';
@@ -55,6 +67,10 @@
 .footer {
     border-top: 1px solid #eee;
     padding: 3rem 2rem 1.5rem;
+    
+    /* Animating */
+    opacity: 0;
+    transform: translateY(-10px);
 }
 
 .footer-container {
@@ -115,5 +131,33 @@
         flex-direction: row;
         gap: 1.5rem;
         margin-top: 1rem;
+    }
+}
+
+/* Fade Animating */
+.footer.show {
+    animation: footerShow .6s ease-in-out forwards;
+}
+
+.cta.show h1, p, a {
+    animation: fadeTop .4s ease-in-out forwards;
+}
+
+.cta.show p {
+    animation-delay: 4s;
+}
+
+.cta.show a {
+    animation-delay: 6s;
+}
+
+@keyframes footerShow {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
     }
 }

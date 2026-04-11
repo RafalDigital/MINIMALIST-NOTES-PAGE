@@ -33,19 +33,33 @@
     padding: 0;
     font-weight: 600;
     color: var(--primary);
+
+    /* Animating */
+    opacity: 0;
+    transform: translateY(10px);
 }
 .left-hero p {
     font-size: 1.25rem;
     margin: 0;
     padding: 0;
+
+    /* Animating */
+    opacity: 0;
+    transform: translateY(10px);
 }
 
 .buttons {
     display: flex;
     gap: 2rem;
+
+    /* Animating */
+    opacity: 0;
+    transform: translateY(10px);
 }
 
-.btn-1, .btn-2 {margin-top: 2rem;}
+.btn-1, .btn-2 {
+    margin-top: 2rem;
+}
 
 .left-hero .btn-1 a {
     display: inline-block;
@@ -92,6 +106,10 @@
 /* RIGHT CONTENT */
 .right-hero {
     position: relative;
+
+    /* Animating */
+    opacity: 0;
+    transform: translateY(10px);
 }
 
 .right-hero .card {
@@ -271,4 +289,21 @@
     .hero-section {
         padding-inline: 0;
     }
+}
+
+/* Fade Animating */
+.hero-section.show h1, p, .right-hero, .buttons {
+    animation: fadeTop .4s ease-in-out forwards;
+}
+
+.hero-section.show p {
+    animation-delay: .2s;
+}
+
+.hero-section.show .right-hero {
+    animation-delay: .6s;
+}
+
+.hero-section.show .buttons {
+    animation-delay: .3s;
 }

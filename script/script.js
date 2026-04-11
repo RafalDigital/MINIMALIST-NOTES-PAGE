@@ -53,7 +53,6 @@ function infoClick() {
 }
 
 // INFO SECTION
-const infoSection = document.querySelector('.info-section');
 function handleFirstScroll(e) {
     let currentPosition = e.scroll;
     
@@ -73,10 +72,24 @@ function handleFirstScroll(e) {
 
 lenis.on('scroll', handleFirstScroll);
 
+// Selector
+const infoSection = document.querySelector('.info-section');
+const heroSection = document.querySelector('.hero-section');
+const cta = document.querySelector('.cta');
+const footer = document.querySelector('.footer');
+
+// Observer
 const observer = new IntersectionObserver((entries) => {
-    if(entries[0].isIntersecting){
-        entries[0].target.classList.add('show');
-        observer.unobserve(entries[0])
-    }
-},{})
-observer.observe(infoSection)
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+            observer.unobserve(entry.target);
+        }
+    });
+},{ threshold: 0.2 })
+observer.observe(infoSection);
+observer.observe(heroSection);
+observer.observe(cta);
+observer.observe(footer);
+
+
