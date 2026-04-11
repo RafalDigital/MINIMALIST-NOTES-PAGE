@@ -9,6 +9,9 @@ html, body {
     overflow-y: visible;
 }
 
+/* DEFAULT STYLE */
+a {cursor: pointer;}
+
 /* CUSTOM SCROLL */
 ::-webkit-scrollbar {
     width: 1.25rem;

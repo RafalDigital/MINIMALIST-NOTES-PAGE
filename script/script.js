@@ -44,8 +44,8 @@ cards.forEach((c) => {
     });
 })
 
-function infoClick() {
-        lenis.scrollTo('#info', {
+function infoClick(info) {
+        lenis.scrollTo(`#${info}`, {
             duration: 1.5,
             lock: true,
             offset: -100
