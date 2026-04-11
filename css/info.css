@@ -247,7 +247,7 @@
     height: fit-content;
     padding: 10px 15px;
     padding-top: 15px;
-    background-color: #eee;
+    background-color: var(--option1);
     display: flex;
     margin-inline: auto;
     justify-content: space-around;
@@ -355,7 +355,7 @@
     }
 
     .icon-card {
-        color: #eee;
+        color: var(--option1);
         background-color: transparent;
         padding: 0;
     }

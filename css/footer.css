@@ -65,7 +65,7 @@
 
 /* FOOTER */
 .footer {
-    border-top: 1px solid #eee;
+    border-top: 1px solid var(--option1);
     padding: 3rem 2rem 1.5rem;
     
     /* Animating */

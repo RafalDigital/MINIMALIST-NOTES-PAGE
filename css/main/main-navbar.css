@@ -1,86 +1,101 @@
-nav {
-    left: 0; right: 0; top: 0;
-    position: fixed;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}    
+        
+body {
+    background-color: #f0f0f0;
     display: flex;
-    align-items: center;
     justify-content: center;
-    padding: 10px 5px;
-    max-width: 1500px;
-    margin-inline: auto;
-    z-index: 1000;
+    min-height: 100vh;
 }
 
-.nav-container {
+/* Nav Utama */
+.navbar {
+    background-color: var(--primary);
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    width: fit-content; 
+    height: fit-content;
+    padding: 5px; /* Dikurangi dari 8px agar lebih ramping */
+    border-radius: 100px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+/* Logo Bulat */
+.logo {
+    width: 36px;  /* Dikecilkan dari 45px */
+    height: 36px; /* Dikecilkan dari 45px */
+    background: var(--option1);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    margin-right: 5px;
+}
+
+/* SVG di dalam logo juga dikecilkan sedikit agar pas */
+.logo svg {
+    width: 18px;
+    height: 18px;
+}
+
+/* Wrapper Menu */
+.menu-wrapper {
     position: relative;
-    width: 10rem;
-    height: auto;
-    padding: .25rem .2rem;
-    border: 2px solid var(--primary);
-    border-radius: 100rem;
-    background-color: #F8F9FA;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    transition: transform .4s cubic-bezier(0.19, 1, 0.22, 1);
-
+    list-style: none;
+    margin: 0 5px; /* Jarak antar bagian dikurangi */
 }
 
-.nav-container:hover {
-    transform: scale(1.05);
-}
-
-.nav-container:active {
-    transform: scale(.95);
-}
-
-.nav-container::before {
-    content: '';
+/* Slider Bar Putih */
+.slider {
     position: absolute;
-    width: 5rem;
-    height: 2.1rem;
-    top: 50%;
-    background: var(--primary);
-    border-radius: 100rem;
+    top: 0;
+    left: 0;
+    height: 100%; 
+    background: var(--option1);
+    border-radius: 100px;
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
     z-index: 1;
-    transform: translateX(-2.5rem) translateY(-50%);
 }
 
-.nav-container.active::before {
-    animation: moveRight 0.45s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+.menu-item {
+    position: relative;
+    z-index: 2;
 }
 
-.nav-container.clicked:not(.active)::before {
-    animation: moveLeft 0.45s cubic-bezier(0.19, 1, 0.22, 1) forwards;
-}
-
-@keyframes moveRight {
-    0% { transform: translateX(-2.5rem) translateY(-50%) scale(1, 1); }
-    30% { transform: translateX(0) translateY(-50%) scale(1.4, 0.7); }
-    100% { transform: translateX(2.5rem) translateY(-50%) scale(1, 1); }
-}
-
-@keyframes moveLeft {
-    0% { transform: translateX(2.5rem) translateY(-50%) scale(1, 1); }
-    30% { transform: translateX(0) translateY(-50%) scale(1.4, 0.7); }
-    100% { transform: translateX(-2.5rem) translateY(-50%) scale(1, 1); }
-}
-
-.nav-links {
-    padding: .3rem 1rem;
-    width: 5rem;
-    text-align: center;
-    z-index: 1;
-    border-radius: 100rem;
+.menu-item a {
+    display: flex;
+    align-items: center;
+    padding: 0 16px; /* Padding teks dikurangi sedikit */
+    height: 36px;    /* Samakan dengan tinggi logo (36px) */
+    text-decoration: none;
+    color: var(--option1);
+    font-size: 13px; /* Ukuran font dikecilkan sedikit agar proporsional */
+    font-weight: 500;
+    transition: color 0.3s ease;
 }
 
 .link {
+    background: white;
+    color: black;
+    height: 36px; /* Samakan dengan tinggi elemen lainnya (36px) */
+    display: flex;
+    align-items: center;
+    padding: 0 8px;
+    border-radius: 100px;
     text-decoration: none;
-    color: var(--primary);
-    transition: 4s cubic-bezier(0.19, 1, 0.22, 1);
-    user-select: none;
+    font-size: 24px;
+    font-weight: 600;
+    flex-shrink: 0;
+    margin-left: 10px;
 }
 
-.link.active {
-    color: white;
+/* Warna teks saat aktif */
+.menu-item.active a {
+    color: var(--primary);
 }

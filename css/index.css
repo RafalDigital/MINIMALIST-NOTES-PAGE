@@ -1,5 +1,6 @@
 :root {
     --primary: #3D00FF;
+    --option1: #eee;
 }
 
 html, body {
@@ -8,6 +9,7 @@ html, body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     overflow-y: visible;
 }
+
 
 /* DEFAULT STYLE */
 a {cursor: pointer;}
