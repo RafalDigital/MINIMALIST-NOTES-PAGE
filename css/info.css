@@ -306,6 +306,8 @@
     .info-section {
         max-width: 920px;
         padding-inline: 0;
+        min-height: 550px;
+        height: auto;
     }
     
 
