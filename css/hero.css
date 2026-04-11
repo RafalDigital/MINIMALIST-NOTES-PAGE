@@ -269,6 +269,6 @@
         width: 100%;
     }
     .hero-section {
-        padding-inline: .5rem;
+        padding-inline: 0;
     }
 }

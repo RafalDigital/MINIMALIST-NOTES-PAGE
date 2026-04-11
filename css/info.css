@@ -304,8 +304,10 @@
 
 @media (max-width: 920px) {
     .info-section {
-        padding-inline: 1rem;
+        max-width: 920px;
+        padding-inline: 0;
     }
+    
 
     .first-box {
         transform: scale(0.8);
@@ -318,5 +320,13 @@
     }
     .info-section {
         padding-inline: .5rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .info-section {
+        max-width: 600px;
+        padding-inline: 0;
+
     }
 }
