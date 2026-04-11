@@ -210,8 +210,8 @@
         padding-bottom: 4rem;
     }
 }
-/* @media (max-width: 920px) {
+@media (max-width: 920px) {
     .hero-section {
         padding-inline: .2rem;
     }
-} */
+}
