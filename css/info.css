@@ -315,7 +315,7 @@
     .info-section.show .content-1,
     .info-section.show .content-2 {
         height: 150px;
-        max-width: 500px;
+        max-width: 400px;
     }
     .info-section {
         padding-inline: .5rem;
