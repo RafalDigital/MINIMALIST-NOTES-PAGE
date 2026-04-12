@@ -1,101 +1,149 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}    
-        
-body {
-    background-color: #f0f0f0;
-    display: flex;
-    justify-content: center;
-    min-height: 100vh;
-}
-
-/* Nav Utama */
-.navbar {
-    background-color: var(--primary);
-    margin-top: 1rem;
-    display: flex;
-    align-items: center;
-    width: fit-content; 
-    height: fit-content;
-    padding: 5px; /* Dikurangi dari 8px agar lebih ramping */
-    border-radius: 100px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-}
-
-/* Logo Bulat */
-.logo {
-    width: 36px;  /* Dikecilkan dari 45px */
-    height: 36px; /* Dikecilkan dari 45px */
-    background: var(--option1);
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-shrink: 0;
-    margin-right: 5px;
-}
-
-/* SVG di dalam logo juga dikecilkan sedikit agar pas */
-.logo svg {
-    width: 18px;
-    height: 18px;
-}
-
-/* Wrapper Menu */
-.menu-wrapper {
-    position: relative;
-    display: flex;
-    list-style: none;
-    margin: 0 5px; /* Jarak antar bagian dikurangi */
-}
-
-/* Slider Bar Putih */
-.slider {
-    position: absolute;
-    top: 0;
+/* Left Navbar (Desktop Only) */
+.side-nav {
+    width: 250px;
+    height: 100dvh;
+    position: fixed;
     left: 0;
-    height: 100%; 
-    background: var(--option1);
-    border-radius: 100px;
-    transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
-    z-index: 1;
-}
-
-.menu-item {
-    position: relative;
-    z-index: 2;
-}
-
-.menu-item a {
+    top: 0;
     display: flex;
-    align-items: center;
-    padding: 0 16px; /* Padding teks dikurangi sedikit */
-    height: 36px;    /* Samakan dengan tinggi logo (36px) */
-    text-decoration: none;
-    color: var(--option1);
-    font-size: 13px; /* Ukuran font dikecilkan sedikit agar proporsional */
-    font-weight: 500;
-    transition: color 0.3s ease;
+    flex-direction: column;
+    padding-bottom: 0;
+    padding: 20px;
+    border-right: 0.4px solid var(--option2);
+    /* background-color: white; */
 }
 
-.link {
-    background: white;
-    color: black;
-    height: 36px; /* Samakan dengan tinggi elemen lainnya (36px) */
-    display: flex;
-    align-items: center;
-    padding: 0 8px;
-    border-radius: 100px;
-    text-decoration: none;
-    font-size: 24px;
-    font-weight: 600;
-    flex-shrink: 0;
-    margin-left: 10px;
-}
-
-/* Warna teks saat aktif */
-.menu-item.active a {
+.logo{display: flex; gap: .5rem;}
+/* .logo img {width: 3rem;} */
+.logo img {width: 10rem;}
+.logo h1 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 24px; 
+    font-weight: 400; 
     color: var(--primary);
+}
+
+.add-note-form {
+    padding: 10px 15px;
+    background-color: var(--primary);
+    border-radius: 1rem;
+    border: 1px solid var(--primary);
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    cursor: pointer;
+    height: 3rem;
+    margin-bottom: 1rem;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.add-note-form span {color: white; transition: 1.2s cubic-bezier(0.165, 0.84, 0.44, 1);}
+
+.add-note-form::before {
+    content: '';
+    position: absolute;
+    left: 48%; 
+    top: 100%;
+    transform: translateX(-50%);
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    background-color: white;
+    z-index: -1;
+    transition: 1.2s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transform-origin: center center;
+}
+
+.add-note-form:hover::before {
+    transform: scale(6);
+}
+
+.add-note-form:hover span {
+    color: var(--primary);
+}
+
+.notebook-bar {
+    display: flex;
+    padding-inline: .5rem;
+    margin-bottom: 1rem;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--primary);
+}
+
+.add-notebook-form {
+    border: none;
+    width: fit-content;
+    height: fit-content;
+    font-size: 1rem;
+    cursor: pointer;
+    color: var(--primary);
+    padding: .2rem .5rem;
+    position: relative;
+    border-radius: 1rem;
+    z-index: 1;
+    overflow: hidden;
+    transition: .8s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.add-notebook-form::before {
+    content: '';
+    position: absolute;
+    right: -400%; 
+    top: -50%;
+    transform: translateX(-50%);
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    background-color: var(--primary);
+    z-index: -1;
+    transition: .8s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transform-origin: center center;
+}
+
+.add-notebook-form:hover::before {
+    right: -200%;
+}
+
+.add-notebook-form:hover {
+    color: white;
+}
+
+.notebooks-list {
+    flex-grow: 1;
+    width: 95%;
+    overflow-y: auto;
+    margin-bottom: 1rem;
+    margin-inline: auto;
+    background-color: var(--option1);
+    border-radius: 1rem;
+}
+
+.footer {
+    /* border-top: 1px solid var(--option2); */
+    padding: .5rem .5rem;
+    /* padding-bottom: 2.5rem; */
+    margin-inline: auto;
+    /* box-shadow: -0px 4px 10px rgba(0, 0, 0, 0.4); */
+}
+
+.footer p {
+    margin: 0;
+    font-size: 12px;
+    opacity: 0.5;
+    text-align: center;
+}
+
+/* Navbar (Mobile - Desktop */
+.navbar {
+    position: fixed;
+    background-color: var(--option1);
+    height: fit-content;
+    top: 0;
+    right: 0;
+    padding: 10px 15px;
+    /* Gunakan calc untuk mengurangi lebar margin agar tidak overflow */
+    width: calc(100% - 250px); 
+    margin-left: 250px; /* Samakan dengan lebar .side-nav */
+    background-color: black;
 }

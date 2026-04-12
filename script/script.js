@@ -56,7 +56,7 @@ function infoClick(info) {
 function handleFirstScroll(e) {
     let currentPosition = e.scroll;
     
-    if (currentPosition > 0 && currentPosition < 200) {
+    if (currentPosition > 10 && currentPosition < 200) {
         
         lenis.off('scroll', handleFirstScroll);
 

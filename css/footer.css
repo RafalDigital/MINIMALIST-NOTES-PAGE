@@ -11,6 +11,7 @@
     /* Animating */
     opacity: 0;
     transform: translateY(10px);
+    text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
 }
 
 .cta p {
@@ -21,6 +22,7 @@
     /* Animating */
     opacity: 0;
     transform: translateY(10px);
+    text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
 }
 
 .cta a:hover {
@@ -40,6 +42,7 @@
     overflow: hidden;
     z-index: 1;
     transition: 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
 
     /* Animating */
     opacity: 0;

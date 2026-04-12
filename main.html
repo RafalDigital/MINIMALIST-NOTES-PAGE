@@ -6,26 +6,46 @@
     <title>MINIMALIST NOTES</title>
     <link rel="stylesheet" href="css/main/main-navbar.css">
     <link rel="stylesheet" href="css/main/main-dashboard.css">
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/main/main-index.css">
 
     <!-- CDN LINK -->
      <link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css" rel="stylesheet"/>
+
+     <!-- FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
 </head>
-<body>
-    <nav class="navbar">
+<body style="overflow: hidden;">
+<!-- <div class="wrapper"> -->
+    <nav class="side-nav">
         <div class="logo">
-            <img src="assets/svg/Logo2.svg" alt="">
+            <img src="assets/svg/Logo6.svg" alt="">
+            <!-- <h1>FocusNotes</h1> -->
         </div>
-
-        <ul class="menu-wrapper">
-            <div class="slider"></div>
-            
-            <li class="menu-item active"><a href="#">Notes</a></li>
-            <li class="menu-item"><a href="#">Tasks</a></li>
-        </ul>
-
-        <a href="#" class="link"><i class="ri-github-fill"></i></a>
+        <div class="line"></div>
+        <button id="add-note-form" class="add-note-form"><span><i class="ri-add-fill"></i>Add Note</span></button>
+        <div class="notebook-bar">
+            <p>NOTEBOOKS</p>
+            <button id="add-notebook-form" class="add-notebook-form"><i class="ri-add-fill"></i></button>
+        </div>
+        <div class="notebooks-list"></div>
+        <div class="footer">
+            <p>© 2026 RafalDigital. All rights reserved.</p>
+        </div>
     </nav>
+
+    <div class="main-content">
+        <div class="blank">
+            <img src="assets/svg/Nothing.svg" alt="">
+            <h1>Nothings Here</h1>
+        </div>
+    </div>
+
+    <nav class="navbar"></nav>
+<!-- </div> -->
+    
+
 </body>
 <script src="script/main.js"></script>
 </html>
