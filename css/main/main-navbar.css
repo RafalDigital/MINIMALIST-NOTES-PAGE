@@ -362,6 +362,9 @@
         width: 100%;
         margin-left: 0;
     }
+    .navbar-2 {
+        margin-top: .5rem;
+    }
     .mobile-menu {
         display: block;
     }
