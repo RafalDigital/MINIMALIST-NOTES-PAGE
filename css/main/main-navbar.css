@@ -81,6 +81,7 @@
 }
 
 .add-notebook-form {
+    display: flex;
     border: none;
     width: fit-content;
     height: fit-content;
@@ -94,6 +95,10 @@
     z-index: 1;
     overflow: hidden;
     transition: .8s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.add-notebook-form p {
+    display: none;
 }
 
 .add-notebook-form::before {
@@ -361,9 +366,42 @@
     color: var(--primary);
 }
 
+.close-side-nav {
+    padding: 0;
+    width: fit-content;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    color: var(--option4);
+    position: absolute;
+    right: 2rem;
+    border: none;
+    background-color: var(--white);
+    border-radius: .2rem;
+}
+
+.close-side-nav span {
+    font-size: 28px;
+}
+
+.close-side-nav:active {
+    background-color: var(--option3);
+}
+
 
 @media (max-width: 620px) {
     .side-nav {
+        width: 100%;
+        z-index: 800;
+        transform: translateX(35rem);
+        transition: .2s ease-out;
+        opacity: 0;
+    }
+    .side-nav.open {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    .side-nav .add-note-form {
         display: none;
     }
     .navbar {
@@ -382,6 +420,34 @@
     }
     .mobile-add-note {
         display: block;
+    }
+    .add-notebook-form {
+        display: flex;
+        flex-direction: row;
+        background-color: var(--primary);
+        color: white;
+        padding: 5px 10px;
+    }
+    .add-notebook-form p {
+        margin-left: .5rem;
+        display: inline-block;
+    }
+    .notebook-card {
+        width: 98%;
+    }
+    .notebook-card p {
+        font-size: 16px;
+    }
+    .notebook-card .buttons {
+        opacity: 1;
+        pointer-events: all;
+        gap: 1rem;
+    }
+    .notebook-card .buttons span {
+        font-size: 20px;
+    }
+    .close-side-nav {
+        display: flex;
     }
 }
 

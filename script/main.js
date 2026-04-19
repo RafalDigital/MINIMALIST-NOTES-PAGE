@@ -22,6 +22,10 @@ const blankForm = document.getElementById('form');
 const darkLayer = document.querySelector('.dark-layer');
 const blurLayer = document.querySelector('.blur-layer');
 const logo = document.getElementById('Logo');
+const mobileNavBtn = document.getElementById('mobile-menu');
+const sideNav = document.getElementById('side-nav');
+const closeSideNav = document.getElementById('close-side-nav');
+const mobileAddNote = document.getElementById('mobile-add-note')
 
 // ============ //
 //    Script    //
@@ -382,7 +386,9 @@ function updateNotebookTitle(id, newTitle){
 }
 
 // Listeners
-addNoteForm.addEventListener('click', () => {
+addNoteForm.addEventListener('click', () => {addNoteClick()});
+mobileAddNote.addEventListener('click', () => {addNoteClick()});
+function addNoteClick() {
     const currentId = notebookDasboardTitle.dataset.currentId;
     if (currentId) {
         openNote("Untitled", "Write your thought here...", true);
@@ -390,7 +396,7 @@ addNoteForm.addEventListener('click', () => {
         // Ganti alert browser dengan custom alert
         showCustomConfirm("Please select a notebook first!", null, true);
     }
-});
+};
 
 addNotebookBtn.addEventListener('click', () => {
     renderNotebooks(true);
@@ -420,3 +426,12 @@ notebookList.addEventListener('click', (e) => {
 });
 
 renderNotebooks();
+
+// Mobile
+mobileNavBtn.addEventListener('click', () => {
+    sideNav.classList.toggle('open');
+})
+
+closeSideNav.addEventListener('click', () => {
+    sideNav.classList.toggle('open');
+})

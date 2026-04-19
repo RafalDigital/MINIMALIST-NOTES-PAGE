@@ -375,6 +375,9 @@ body, html {
     .content {
         margin-top: 5rem;
     }
+    .form {
+        max-width: 60%;
+    }
 }
 
 @media (max-width: 800px) {
@@ -383,6 +386,13 @@ body, html {
     }
     .content {
         margin-top: 5rem;
+    }
+    .form {
+        max-width: 65%;
+    }
+    .delete-note-card {
+        opacity: 1;
+        pointer-events: all;
     }
 }
 
@@ -396,5 +406,8 @@ body, html {
     }
     .blank {
         top: 30%;
+    }
+    .form {
+        max-width: 70%;
     }
 }
