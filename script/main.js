@@ -54,11 +54,11 @@ darkInput.addEventListener('click', () => {
     if (isDark) {
         document.documentElement.classList.add('dark');
         darkIcon.classList.replace('ri-sun-line', 'ri-moon-fill');
-        logo.src = 'assets/svg/Logo7.svg';
+        logo.src = 'assets/svg/LogoDark.svg';
     } else {
         document.documentElement.classList.remove('dark');
         darkIcon.classList.replace('ri-moon-fill', 'ri-sun-line');
-        logo.src = 'assets/svg/Logo6.svg';
+        logo.src = 'assets/svg/LogoLight.svg';
     }
 
     localStorage.setItem('theme', isDark ? 'dark' : 'light');
@@ -70,12 +70,12 @@ if (savedTheme === 'dark') {
     document.documentElement.classList.add('dark');
     darkInput.checked = true;
     darkIcon.classList.replace('ri-sun-line', 'ri-moon-fill');
-    logo.src = 'assets/svg/Logo7.svg';
+    logo.src = 'assets/svg/LogoDark.svg';
 } else {
     document.documentElement.classList.remove('dark');
     darkInput.checked = false;
     darkIcon.classList.replace('ri-moon-fill', 'ri-sun-line');
-    logo.src = 'assets/svg/Logo6.svg';
+    logo.src = 'assets/svg/LogoLight.svg';
 }
 
 // ==================== //
