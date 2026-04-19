@@ -452,6 +452,9 @@
     .close-side-nav {
         display: flex;
     }
+    .notebook-card p {
+        max-width: 10rem;
+    }
 }
 
 /* Resposive pakai .side-nav */
