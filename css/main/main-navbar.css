@@ -159,10 +159,12 @@
     display: inline-block;
     font-size: 14px;
     max-width: 6rem;
-    overflow-y: hidden;
     height: fit-content;
     scrollbar-width: none;
     -ms-overflow-style: none;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow-y: hidden;
 }
 
 .notebook-card p::-webkit-scrollbar {
